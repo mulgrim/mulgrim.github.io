@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<section class="update">
+    <article class ="hero">
+        <time datetime="{{ page.date }}">{{ page.date | date_to_long_string: "ordinal", "US" }}</time>
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+    </article>
+</section>

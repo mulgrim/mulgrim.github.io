@@ -1,0 +1,62 @@
+// page 폴더 중 privacy 와 update 페이지에 적용됨
+
+
+#site-page {
+  & > section {}
+  h1 {
+    margin-bottom: $space16;
+    padding-bottom: $space16;
+    border-bottom: 1px solid $border-light-color;
+    color: $text-title-color;
+    font-family: $font-serif;
+    text-align: left;
+    // from h2
+    font-size: $font-xxlarge-size;
+    @media screen and (min-width:$screen-small-width) {
+      font-size: $font-xxxlarge-size; // default
+    }
+    @media screen and (min-width:$screen-xlarge-width) {
+      font-size: $font-xxxxlarge-size;
+    }
+  }
+
+  ul.update-list {
+    margin-left: $space16;
+    li {
+      padding: $space4 0px;
+      margin-bottom: $space4;
+      border-bottom: 1px solid $gray-100;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: $font-small-size;
+      color: $link-color;
+      @media screen and (min-width:$screen-medium-width) {
+        font-size: $font-medium-size;
+      }
+      time {
+        display: none;
+        font-family: $font-monospace;
+        color: $text-color;
+        @media screen and (min-width:$screen-xxsmall-width) {
+          display: inline-block;
+          margin-right: $space32;
+        }
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+      a {
+        margin-left: 0;
+        @media screen and (min-width:$screen-xxsmall-width) {
+          margin-left: $space16;
+        }
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+}

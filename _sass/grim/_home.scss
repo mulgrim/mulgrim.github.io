@@ -1,0 +1,308 @@
+#site-home {
+  background-color: $sky-color;
+  h2, h3, h4, h5 {
+    margin: 0;
+  }
+  h2 {
+    font-size: $font-xlarge-size;
+    font-family: $font-sans-serif;
+    font-weight: normal;
+  }
+  ul {
+    list-style-type: none;
+  }
+  .hero {
+    background-color: $sky-color;
+    background-image: url(/assets/feature-bg.svg), linear-gradient(0deg, $sky-color, $background-color);
+    background-size: 50px auto, contain;
+    h2 {
+      font-family: $font-monospace;
+      font-size: $font-large-size;
+      font-weight: normal;
+      color: $ocean-blue-950;
+      @media screen and (min-width:$screen-xsmall-width) {
+        font-size: $font-xlarge-size;
+      }
+      @media screen and (min-width:$screen-medium-width) {
+        font-size: $font-xxlarge-size;
+      }
+    }
+    h3 {
+      font-size: $font-small-size;
+      color: $ocean-blue-800;
+      @media screen and (min-width:$screen-xsmall-width) {
+        font-size: $font-medium-size;
+      }
+      @media screen and (min-width:$screen-medium-width) {
+        font-size: $font-large-size;
+      }
+    }
+    article {
+      @extend .flex;
+      padding-bottom: $row-height / 4;
+      @media screen and (min-width:$screen-medium-width) {
+        padding-bottom: $row-height / 2;
+      }
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+    .cover {
+      display: block;
+      margin: 0 auto;
+      width: $icon-small-size;
+      height: $icon-small-size;
+      @media screen and (min-width:$screen-medium-width) {
+        width: $icon-medium-size;
+        height: $icon-medium-size;
+      }
+      img {
+        &:hover,
+        &:focus {
+          @include box-shadow(0, 1px, 5px, 1px, $ocean-blue-500);
+          @include transition(box-shadow ease .3s);
+        }
+      }
+    }
+    .item {
+      padding-left: $space16;
+      @media screen and (min-width:$screen-medium-width) {
+        padding-left: $space32;
+      }
+    }
+    .platform p {
+      font-size: $font-xsmall-size;
+      display: inline-block;
+      margin: 1px auto;
+      width: 85px;
+      text-align: center;
+      font-weight: normal;
+      border-radius: 25px;
+      border-width: 2px;
+      border-style: solid;
+      color: $ocean-blue-600;
+    }
+  }
+
+  .recent {
+    padding-top: $row-height / 2;
+    padding-bottom: $row-height / 2;
+    .wrapper {
+      @media screen and (min-width:$screen-medium-width) {
+        background: url("/assets/sun-blur.svg") right center no-repeat;
+        background-size: 100px;
+      }
+    }
+    h3 {
+      font-size: $font-xlarge-size;
+    }
+    ul {
+      margin-left: $space4;
+      margin-right: $space4;
+      @media screen and (min-width:$screen-small-width) {
+        margin-left: $space16;
+        margin-right: $space16;
+      }
+      @media screen and (min-width:$screen-medium-width) {
+        max-width: 80%;
+      }
+      @media screen and (min-width:$screen-large-width) {
+        max-width: 70%;
+      }
+      @media screen and (min-width:$screen-xlarge-width) {
+        max-width: 65%;
+      }
+    }
+    li {
+      padding: $space4 0px;
+      margin-bottom: $space4;
+      margin-left: $space16;
+      border-bottom: 1px solid lighten($sky-color, 5%);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: $font-small-size;
+      color: $link-color;
+      @media screen and (min-width:$screen-medium-width) {
+        font-size: $font-medium-size;
+      }
+      time {
+        display: none;
+        font-family: $font-monospace;
+        color: $text-color;
+        @media screen and (min-width:$screen-xxsmall-width) {
+          display: inline-block;
+          margin-right: $space32;
+        }
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+      a {
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .flap {
+    padding-top: 200px;
+    background-color: $sea-color;
+    background: $sea-color url("/assets/voyage.svg") top 20px center no-repeat;
+    background-size: 616px;
+    object-fit: cover;
+    h3 {
+      width: 100%;
+      font-size: $font-small-size;
+      font-family: $font-sans-serif;
+      text-align: center;
+      padding: $space16 $space4;
+      color: $white-color;
+      span {
+        display: block;
+        @media screen and (min-width:$screen-small-width) {
+          font-size: $font-medium-size;
+        }
+        @media screen and (min-width:$screen-medium-width) {
+          display: inline;
+        }
+      }
+
+    }
+    p {
+      font-size: $font-small-size;
+      font-family: $font-sans-serif;
+    }
+    em {
+      font-style: italic;
+    }
+    ::selection {
+      @include dark-on-selection;
+    }
+    a[href^="mailto:"] {
+      color: $white-color;
+      text-decoration: none;
+      text-shadow: none;
+      font-style: italic;
+      &:hover {
+        color: $gray-100;
+      }
+    }
+    .column {
+      background-color: rgba($color: $white-color, $alpha: .1);
+      padding: $space16;
+      &:nth-of-type(1) {
+        border-radius: 25px 25px 0 0;
+        border-bottom: 1px solid $sea-color;
+        @media screen and (min-width:$screen-small-width) {
+          border-radius: 25px 0 0 25px;
+          border-right: 1px solid $sea-color;
+        }
+      }
+      &:nth-of-type(2) {
+        border-radius: 0 0 25px 25px;
+        border-top: 1px solid $sea-color;
+        @media screen and (min-width:$screen-small-width) {
+          border-radius: 0 25px 25px 0;
+          border-left: 1px solid $sea-color;
+        }
+      }
+      &-full {
+        padding:$space16;
+        p {
+          margin: 0;
+          color: $white-color;
+        }
+      }
+      h4 {
+        width: 100%;
+        padding-left: 80px + $space16; // 사진크기 + 여백
+        padding-bottom: $space8;
+        font-weight: normal;
+        @media screen and (min-width:$screen-small-width) {
+          padding-left: 50px + $space8;
+        }
+        @media screen and (min-width:$screen-medium-width) {
+          padding-left: 80px + $space16;
+        }
+        @media screen and (min-width:$screen-xlarge-width) {
+          padding-left: 100px + $space32;
+        }
+      }
+      figure {
+        width: 80px;
+        height: 80px;
+        border: 4px solid $sea-color;
+        border-radius: 50%;
+        background-repeat: none;
+        background-position: center;
+        background-size: cover;
+        @media screen and (min-width:$screen-small-width) {
+          width: 50px;
+          height: 50px;
+        }
+        @media screen and (min-width:$screen-medium-width) {
+          width: 80px;
+          height: 80px;
+        }
+        @media screen and (min-width:$screen-xlarge-width) {
+          width: 100px;
+          height: 100px;
+        }
+      }
+      ul {
+        align-items: center;
+        font-size: $font-small-size;
+        margin-left: $space16;
+        @media screen and (min-width:$screen-small-width) {
+          margin-left: $space8;
+        }
+        @media screen and (min-width:$screen-medium-width) {
+          margin-left: $space16;
+        }
+        @media screen and (min-width:$screen-xlarge-width) {
+          margin-left: $space32;
+          padding-top: $space8;
+        }
+      }
+    }
+    .koni .photo {
+        background-image: url("/assets/koni-2021-300.jpg");
+    }
+    .kiro .photo {
+        background-image: url("/assets/kiro-2021-300.jpg");
+    }
+  }
+
+}
+
+#site-aside {
+  // box-shadow: 0 -1px 2px -1px rgba($ocean-blue-500, .2);
+  // filter: drop-shadow(0px -1px 1px rgba($ocean-blue-500, .2));
+  background-color: $gray-50; //$navigation-bar-color;
+  &.home {
+    background-color: $ocean-blue-700;
+    a {
+      color: $white-color;
+    }
+  }
+  li {
+    font-weight: bold;
+    font-size: $font-small-size;
+  }
+}
+
+#site-footer{
+  padding: 0 0 $space64 0;
+  // background: url("/assets/feature-bg.svg"), linear-gradient(0deg, $sand-light-color, $background-color);
+  // background-size: 50px;
+  // border-bottom: 5px solid $wood-light-color;
+  font-size: $font-xsmall-size;
+  color: $white-color;
+  span {
+    display: inline-block;
+    // border-top: 1px solid $sand-color;
+  }
+}

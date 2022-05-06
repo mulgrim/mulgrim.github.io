@@ -1,0 +1,68 @@
+---
+layout: default
+---
+
+<section class="{{ page.layout }} feature">
+  <h1>Feature</h1>
+  <section class="hero"><div class="wrapper">
+    {%- assign sorted_pages = site.pages | sort:'arrival' | reverse -%}
+    {%- for node in sorted_pages -%}
+    {%- if node.layout == 'product' and node.arrival -%}
+    <article>
+        <div class="column cover">
+          <a href="{{ node.url | relative_url }}"><img class="icon" alt="{{ node.title }}" src="/assets/{{ node.icon }}"></a>
+        </div>
+        <div class="column item">
+          <h2 class="appname">{{ node.title }}</h2>
+          <h3 class="description">{{ node.tagline }}</h3>
+        </div>
+        <div class="column platform">
+          {%- for platform in node.platform -%}
+          <p>{{ platform }}</p>
+          {%- endfor -%}
+        </div>
+    </article>
+    {%- endif -%}
+    {%- endfor -%}
+  </div></section>
+</section>
+
+<section class="{{ page.layout }} recent">
+  <div class="wrapper">
+    <h3>Recent</h3>
+    <ul>
+      {% assign posts = site.posts | where: 'layout', 'update' | slice: 0, site.update_home_count %}
+      {%- for post in posts -%}
+      <li><time datetime="{{ post.date }}">{{ post.date | date: "%b %d, %Y" }}</time><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+
+<section class="{{ page.layout }} flap">
+  <div class="wrapper">
+    <h3><span>We create iOS &#183; Mac applications </span><span>that are easy and fun to use.</span></h3>
+    <article class="column koni">
+      <h4>Koni Son</h4>
+      <figure class="photo"></figure>
+      <ul>
+        <li>Graphics</li>
+        <li>Core Logic</li>
+        <li><em><script type="text/javascript">document.write('koni'+String.fromCharCode(Math.pow(2,6))+'m'+'u'+'l'+'g'+'r'+'i'+'m'+String.fromCharCode(46)+'c'+'o'+'m');</script><noscript>&#107;&#111;&#110;&#105;&#35;&#109;&#117;&#108;&#103;&#114;&#105;&#109;&#46;&#99;&#111;&#109;</noscript></em></li>
+      </ul>
+    </article>
+    <article class="column kiro">
+      <h4>Kiro Shin</h4>
+      <figure class="photo"></figure>
+      <ul>
+        <li>Design</li>
+        <li>Architecture</li>
+        <li><em><script type="text/javascript">document.write('kiro'+String.fromCharCode(Math.pow(2,6))+'m'+'u'+'l'+'g'+'r'+'i'+'m'+String.fromCharCode(46)+'c'+'o'+'m');</script><noscript>&#107;&#105;&#114;&#111;&#35;&#109;&#117;&#108;&#103;&#114;&#105;&#109;&#46;&#99;&#111;&#109;</noscript></em></li>
+      </ul>
+    </article>
+    <aside class="column-full">
+      <p>Mulgrim is a small company with two senior developers begun in 2020.</p>
+      <p>If you have feature suggestions or report a bug, please send to <em><script type="text/javascript">document.write('support'+String.fromCharCode(Math.pow(2,6))+'m'+'u'+'l'+'g'+'r'+'i'+'m'+String.fromCharCode(46)+'c'+'o'+'m');</script><noscript>&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#35;&#109;&#117;&#108;&#103;&#114;&#105;&#109;&#46;&#99;&#111;&#109;</noscript></em></p>
+    </aside>
+  </div>
+</section>

@@ -1,0 +1,1 @@
+<svg width="116" height="116" xmlns="http://www.w3.org/2000/svg"><defs><filter x="-44.1%" y="-44.1%" width="188.2%" height="188.2%" filterUnits="objectBoundingBox" id="a"><feGaussianBlur stdDeviation="10" in="SourceGraphic"/></filter></defs><circle filter="url(#a)" cx="64" cy="64" r="34" transform="translate(-6 -6)" fill="#fbfbfb" fill-rule="evenodd"/></svg>

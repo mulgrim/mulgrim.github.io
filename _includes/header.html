@@ -1,0 +1,24 @@
+
+{%- if page.category -%}
+  <header id="site-header" class="{{ page.category }}">
+{%- else -%}
+  <header id="site-header">
+{%- endif -%}
+  <div class="wrapper">
+    <a href="{{ site.baseurl }}/" class="site-header-home"><h2>{{ site.title }}</h2></a>
+    <nav>
+      <ul>
+        {%- assign sorted_pages = site.pages | sort:'arrival' | reverse -%}
+        {%- for node in sorted_pages -%}
+          {%- if node.layout == 'product' -%}
+            {%- if node.category and page.category == node.category -%}
+              <li class="site-header-active site-header-{{ node.layout }} {{node.category}}"><a href="{{ node.url | relative_url }}" class="active {{node.category}}">{{ node.title }}</a></li>
+            {%- else -%}
+              <li class="site-header-inactive site-header-{{ node.layout }} {{node.category}}"><a href="{{ node.url | relative_url }}" class="{{node.category}}">{{ node.title }}</a></li>
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </nav>
+  </div>
+</header>

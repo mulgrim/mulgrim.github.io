@@ -1,0 +1,203 @@
+.wrapper {
+  display: block;
+  margin: 0 auto;
+  max-width: $wrapper-xsmall-width;
+  @media screen and (min-width:$screen-small-width) {
+    max-width: $wrapper-small-width;
+  }
+  @media screen and (min-width:$screen-medium-width) {
+    max-width: $wrapper-medium-width;
+  }
+  @media screen and (min-width:$screen-large-width) {
+    max-width: $wrapper-large-width;
+  }
+  @media screen and (min-width:$screen-xlarge-width) {
+    max-width: $wrapper-xlarge-width;
+  }
+  @media screen and (min-width:$screen-xxlarge-width) {
+    max-width: $wrapper-xxlarge-width;
+  }
+
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.column {
+  width: 50%;
+  &-full {
+    flex-basis: 100%;
+  }
+}
+
+
+// ------------------------------
+
+* {
+  @include box-sizing;
+}
+
+body {
+  display: block;
+}
+
+#site-header {
+  width: 100%;
+  height: $row-height;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  .wrapper {
+    @extend .flex;
+    height: 100%;
+    align-items: center;
+  }
+  nav {
+    @include list-wide-none-style($row-height);
+  }
+}
+
+main {
+  min-height: $main-min-height;
+  section .hero {
+    margin: 0;
+    padding-top: $row-height * 2;
+    padding-bottom: $row-height;
+    min-height: $row-height * 2; // 100px
+    @media screen and (min-width:$screen-medium-width) {
+      min-height: $row-height * 4; // 200px
+    }
+    h1 {
+      margin-top: 0;
+      margin-bottom: $row-height;
+    }
+  }
+}
+
+#site-home {
+  h1 {
+    display: none;
+  }
+  img {
+    width: 100%;
+  }
+  .hero {
+    .wrapper {
+      @extend .flex;
+      justify-content: center;
+    }
+    article {
+      @extend .flex;
+      justify-content: center;
+      width: 90%;
+      @media screen and (min-width:$screen-medium-width) {
+        width: 80%;
+      }
+    }
+    .column {
+      align-self: center;
+      width: 30%;
+      &.cover {
+        flex-shrink: 0;
+      }
+      &.item {
+        flex-grow: 1;
+      }
+      &.platform {
+        display: none;
+        @media screen and (min-width:$screen-medium-width) {
+          display: block;
+          flex-shrink: 0;
+          width: 20%;
+        }
+      }
+    }
+  }
+  .recent {
+    min-height: 100px;
+  }
+  .flap {
+    .wrapper {
+      @extend .flex;
+      flex-direction: column;
+      @media screen and (min-width:$screen-small-width) {
+        flex-direction: row;
+      }
+    }
+    article {
+      @extend .flex;
+      justify-content: flex-start;
+      width: 100%;
+      @media screen and (min-width:$screen-small-width) {
+        width: 50%;
+      }
+    }
+  }
+}
+
+#site-product {
+  h1 {
+    display: none;
+  }
+  img {
+    width: 100%;
+  }
+  .icon {
+    width: 50%;
+  }
+  .flex {
+    display: block;
+    @media screen and (min-width:$screen-medium-width) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+  .row-reverse {
+    @media screen and (min-width:$screen-medium-width) {
+      flex-direction: row-reverse;
+    }
+  }
+  .column {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    @media screen and (min-width:$screen-medium-width) {
+      width: 50%;
+    }
+  }
+}
+
+#site-update,
+#site-page,
+#site-post {
+  min-height: $row-height * 10; // 500px
+  & > * {
+    @extend .wrapper;
+  }
+}
+
+
+#site-aside {
+  height: $row-height;
+  @include list-wide-none-style($row-height);
+  .wrapper {
+    @extend .flex;
+    flex-direction: row;
+  }
+  ul {
+    margin-left: 0;
+  }
+}
+
+#site-footer{
+  height: $row-height * 2;  // 100px
+  line-height: $row-height;
+}

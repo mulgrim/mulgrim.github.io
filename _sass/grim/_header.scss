@@ -1,0 +1,87 @@
+#site-header {
+  background-color: $navigation-bar-color;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  @include transition(background-color ease-in .5s);
+  transition-property: background-color, backdrop-filter, -webkit-backdrop-filter;
+
+  h2 {
+    margin: 0;
+    display: none;
+  }
+
+  .site-header-inactive {
+    border-top: 2px solid $clear-color;
+  }
+  .site-header-active {
+    border-top: 2px solid $ocean-blue-800;
+  }
+
+  li {
+    &.free {
+      display: none;
+      @media screen and (min-width:$screen-xxsmall-width) {
+        display: inline-block;
+      }
+    }
+  }
+
+  a.site-header-home {
+    width: 45px;
+    height: $row-height;
+    background: url("/assets/logo.svg") no-repeat top left;
+    background-size: contain;
+    filter: none;
+    -webkit-filter: none;
+    // @include transition(filter, ease .5s);
+    // 우와 진심으로 놀랬다. svg 를 일반 이미지로 심었을 때 tint 컬러를 먹일 수가 없는데, 이를 필터를 통해 색상 계산
+    // https://hovancik.net/blog/2020/01/22/change-the-color-of-svg-image-via-css/
+    // https://codepen.io/sosuke/pen/Pjoqqp
+
+    &:hover,
+    &:focus {
+      filter: invert(60%) sepia(10%) saturate(3105%) hue-rotate(172deg) brightness(93%) contrast(88%);
+      -webkit-filter: invert(60%) sepia(10%) saturate(3105%) hue-rotate(172deg) brightness(93%) contrast(88%);
+    }
+
+    // FIXME:
+    // 1. 기본에 모노 이미지를 보여준 다음 스위칭
+    //     background: url("/assets/logo-mono.svg") no-repeat top left;
+    //     --> background-image: url("/assets/logo-color.svg");
+    //    그런데 마우스 올리면 이미지 첫 로딩에 깜빡여..
+    //    혹은 이렇게 이미지 중첩으로 preloading 을 해서 흑백은 보이고 칼라는 숨겨서
+    //     background: url("/assets/logo-mono.svg") no-repeat top left, url("/assets/logo-color.svg") no-repeat -9999px -9999px;
+    //    호버 때 읽지 말고 미리 읽으라고 했으나, 결과는 마찬가지
+    //    아무래도 svg 렌더링 때문인 것 같은데, 해결 방법을 도저히 모르겠다.
+    // 2. svg 2개를 1개의 svg로 만들어. 그니까 세로 사이즈가 2배로 되게.
+    //    그리고 css로 position 을 조정해서 서로 다른 위치의 이미지를 보여지게 했는데
+    //    transition 때문에 쓱- 하고 이동하는게 보여... 짜증 솟구침.. 이건 아니다.
+    // 3. 일단 칼라를 흑백으로 보여준 다음 호버에 칼라로 바꾸는 건데,
+    //    그런데 칼라의 그레이스케일이 마음에 안 들어. 해가 검은 색으로 나와서.
+    //    가능하면 svg 의 path id 를 컨트롤하고 싶은데
+    //    그렇게 하려면 html 에 svg를 때려박아야 하고, 캐싱도 안됨.
+    //    캐싱되게 하려면 svg를 object 로 잡는 방법이나 다시 svg 파일 내에서 css 링크시키는 방법이 있는데
+    //    전부 다 더럽다. 에라이 새끼들아.
+    //
+
+  }
+
+  a {
+    text-decoration: none;
+    font-size: $font-small-size;
+    color: $ocean-blue-700;
+    padding: 0 5px;
+    background-color: rgba($color: white, $alpha: .3);
+    border-radius: 5px;
+    &:hover,
+    &:focus {
+      color: $lake-color;
+    }
+    &.active {
+      font-weight: normal;
+      color: $accent-color;
+    }
+  }
+
+}
+

@@ -1,0 +1,226 @@
+// Screen
+$screen-xxlarge-width: 1400px;
+$screen-xlarge-width: 1000px;
+$screen-large-width: 800px;
+$screen-medium-width: 700px;
+$screen-small-width: 600px;
+$screen-xsmall-width: 500px;
+$screen-xxsmall-width: 400px;
+$screen-tiny-width: 300px;  // Block
+
+// Wrapper
+$wrapper-xxlarge-width: 1000px;
+$wrapper-xlarge-width: 800px;
+$wrapper-large-width: 700px;
+$wrapper-medium-width: 600px;
+$wrapper-small-width: 500px;
+$wrapper-xsmall-width: 90%;
+
+// Layout Size
+$row-height: 50px;
+$main-min-height: 400px;
+
+// Space Size
+$space4: 4px;
+$space8: 8px;
+$space16: 16px;
+$space32: 32px;
+$space64: 64px;
+$space96: 96px;
+$space128: 128px;
+
+// Icon Size
+$icon-xlarge-size: 192px;
+$icon-large-size: 128px;
+$icon-medium-size: 80px;
+$icon-small-size: 50px;
+
+// Image Size
+$img-xlarge-wide-size: 700px;
+$img-large-wide-size: 600px;
+$img-medium-wide-size: 500px;
+$img-small-wide-size: 400px;
+$img-xsmall-wide-size: 300px;
+
+
+// Font size
+// 좀더 flexible 형태로 아래처럼 할 수도 있으나...
+//    @mixin relative-font-size($ratio) {font-size: #{$ratio}rem;  // 이건 문자열 치환}
+// 이렇게 사용하면 글자 크기를 컨트롤하기 더욱 어려워져서 나는 싫어. 통일성 떨어짐.
+// 따라서 크기는 다음과 같이 고정하겠어.
+$line-height: 1.5;
+$line-narrow-height: 1.2;
+$font-weight-normal: 400;
+// $font-weight-normal-darkon: 350;
+
+$font-size: 18px;
+$font-xxxxlarge-size: $font-size + 20;
+$font-xxxlarge-size: $font-size + 14;
+$font-xxlarge-size: $font-size + 10;
+$font-xlarge-size: $font-size + 6;
+$font-large-size: $font-size + 2;
+$font-medium-size: $font-size;
+$font-small-size: $font-size - 2;
+$font-xsmall-size: $font-size - 4;
+
+
+// Static Color
+$clear-color: rgba(0, 0, 0, 0);
+$white-color: #ffffff;
+$black-color: #000000;
+
+// Gray Color
+$gray-50: #F2F2F7;
+$gray-100: #E5E5EA;
+$gray-200: #D1D1D6;
+$gray-300: #C7C7CC;
+$gray-400: #AEAEB2;
+$gray-500: #8E8E93;
+$gray-600: #636366;
+$gray-700: #48484A;
+$gray-800: #3A3A3C;
+$gray-900: #2C2C2E;
+$gray-950: #1C1C1E;
+
+// Mulgrim Ocean Color
+$ocean-blue-500: #2384BF;
+$ocean-blue-600: #1667A0;
+$ocean-blue-700: #084A80;
+$ocean-blue-800: #07335A;
+$ocean-blue-900: #061C33;
+$ocean-blue-950: #04101F;
+
+// Illust Color
+// $sky-blue-200
+// $sea-blue-100
+// $sea-blue-500
+// $sand-yellow-300
+// $sand-yellow-500
+// $wood-brouwn-300
+// $rose-red-300
+// $pale-grey-300: #FBFBFB;
+$paper-color: #fbfbfb;
+$sky-color: #99E1FF;
+$sea-color: #0079D6;
+$aqua-color: #48C8DE;
+$lake-color: #1C8BB4;
+// $sun-rose-color: #D50920;
+// $sand-color: #FDB24C;
+// $sand-light-color: #FDE8CA;
+$wood-light-color: #B05014;
+
+// Semantic Color
+$accent-color: #4a9ae1;
+$text-color: $black-color;
+$text-title-color: $ocean-blue-900;
+$text-deco-color: $ocean-blue-800;
+$background-color: $paper-color;
+$code-background-color: $gray-50;
+
+// $fill-light-primary-color: #1A1A1A;
+// $fill-light-secondary-color: #1A1A1A;
+// $fill-dark-primary-color: #1A1A1A;
+// $fill-dark-secondary-color: #1A1A1A;
+
+$link-color: $accent-color;
+$link-visited-color: darken($link-color, 15%);
+$link-hover-color: $ocean-blue-700;
+
+
+$navigation-bar-color: rgba($white-color, .5);
+// $seperator-pale-color: rgba(255, 255, 255, .5);
+
+$border-light-color: $gray-100;
+$border-medium-color: $gray-300;
+$border-dark-color: $gray-500;
+
+$table-text-color: $text-color;
+$table-zebra-color: $gray-50;
+$table-header-bg-color: $gray-200;
+$table-header-border: $gray-100;
+$table-border-color: $gray-100;
+
+// Font style
+$font-sans-serif: Avenir Next, ui-sans-serif, BlinkMacSystemFont, 'Segoe UI', 'Roboto', Open sans, 'Helvetica Neue', Arial, 'Apple SD Gothic Neo', 'Nanum Gothic', 'Malgun Gothic', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-serif: 'New York', ui-serif, 'MS Serif', 'Times New Roman', Times, 'Nanum Myeongjo', serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-monospace: 'SF Mono', SFMono-Regular, ui-monospace, Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+$font-weight: normal;
+
+
+// Icon
+// @function icon($iconName, $color:555555) {
+//   $iconList: (
+//       check: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 477.867 477.867'%3E%3Cpath fill='%23#{$color}' d='M238.933 0C106.974 0 0 106.974 0 238.933s106.974 238.933 238.933 238.933 238.933-106.974 238.933-238.933C477.726 107.033 370.834.141 238.933 0zm0 443.733c-113.108 0-204.8-91.692-204.8-204.8s91.692-204.8 204.8-204.8 204.8 91.692 204.8 204.8c-.122 113.058-91.742 204.678-204.8 204.8z'/%3E%3Cpath fill='%23#{$color}' d='M370.046 141.534c-6.614-6.388-17.099-6.388-23.712 0l-158.601 158.6-56.201-56.201c-6.548-6.78-17.353-6.967-24.132-.419-6.78 6.548-6.967 17.353-.419 24.132.137.142.277.282.419.419l68.267 68.267c6.664 6.663 17.468 6.663 24.132 0l170.667-170.667c6.548-6.779 6.36-17.583-.42-24.131z'/%3E%3C/svg%3E"
+//   );
+//   $icon: map-get($iconList, $iconName);
+//   @return url("data:image/svg+xml;charset=utf8,#{$icon}");
+// }
+
+// Image
+// $image-product-ivdrop-icon-large : url("/assets/product-ios-ivdrop-icon-large.png");
+
+// Function
+// @function radius-size($height: 100, $ratio: 10) {
+//   @return // $n * $unit-width + ($n - 1) * $gutter-width;
+// }
+
+
+// Template
+@mixin box-sizing($type: border-box) {
+  -webkit-box-sizing: $type;
+  -moz-box-sizing: $type;
+  box-sizing: $type;
+}
+
+// 그레디언트 레이어 위에서 border-radius 가 큰 경우 사파리에서 렌더링에 실패한다.
+// 그래서 이것이 안 먹으면 filter: drop-shadow 를 사용하면 된다.
+@mixin box-shadow($hoffset, $voffset, $blur, $spread, $color) {
+  // [h-offset] [v-offset] [blur] [spread] [color]
+  -moz-box-shadow: $hoffset $voffset $blur $spread $color;
+  -webkit-box-shadow: $hoffset $voffset $blur $spread $color;
+  box-shadow: $hoffset $voffset $blur $spread $color;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  transition: $args;
+  -webkit-backface-visibility: hidden; // 깜빡임 제거
+  backface-visibility: hidden;
+}
+
+@mixin dark-on-selection($background: $aqua-color, $text:$white-color) {
+  background: $background;
+  color: $text;
+}
+
+@mixin list-wide-none-style($height) {
+  ul {
+    list-style-type: none;
+    line-height: $height;
+    vertical-align: middle;
+    li {
+      padding: 0;
+      margin: 0 .2rem 0 0;
+      @media screen and (min-width:$screen-xxsmall-width) {
+        margin-right: .4rem;
+      }
+      @media screen and (min-width:$screen-small-width) {
+        margin-right: .6rem;
+      }
+      @media screen and (min-width:$screen-large-width) {
+        margin-right: 1rem;
+      }
+      display: inline-block;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+
+
+
+

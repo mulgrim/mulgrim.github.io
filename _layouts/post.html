@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<section class="page {{ page.category }}">
+    <article class ="hero">
+        <time datetime="{{ page.date }}">{{ page.date | date_to_long_string: "ordinal", "US" }}</time>
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+    </article>
+</section>
+<nav class="post">
+  {% if page.next.url %}
+  <a href="{{ page.next.url | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
+  {% endif %}
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
+  {% endif %}
+  <a href="#" class="top">Top</a>
+</nav>

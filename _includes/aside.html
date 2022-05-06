@@ -1,0 +1,10 @@
+<aside id="site-aside" class="{{ page.layout }}"><div class="wrapper">
+    <ul>
+        <li><a href="https://twitter.com/mulgrim/">TWITTER</a></li>
+        <li><a href="/updates/">UPDATES</a></li>
+    </ul>
+    {%- if page.policy -%}
+    <ul><li><a href="{{ page.policy | relative_url }}">POLICY</a></li></ul>
+    {%- endif -%}
+</div></aside>
+

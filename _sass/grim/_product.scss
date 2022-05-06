@@ -1,0 +1,426 @@
+// _pages 의 product 에 적용됨.
+
+#site-product {
+  section section {
+    &:nth-child(odd) {
+      background-color: $background-color;
+    }
+    &:nth-child(even) {
+      background-color: $gray-50;
+    }
+    &:not(.hero) {
+      padding: $space64 0;
+    }
+  }
+  h2, h3, h4, h5 {
+    margin: 0;
+  }
+  h2 {
+    font-size: $font-xxxlarge-size;
+    font-family: $font-monospace;
+    font-weight: normal;
+    @media screen and (min-width:$screen-medium-width) {
+      margin-top: $space32;
+      font-size: $font-xxxxlarge-size;
+    }
+  }
+  h3 {
+    font-size: $font-xlarge-size;
+    margin-bottom: $space16;
+    @media screen and (min-width:$screen-small-width) {
+      font-size: $font-xxlarge-size;
+    }
+    @media screen and (min-width:$screen-large-width) {
+      font-size: $font-xxxlarge-size;
+    }
+  }
+  p {
+    font-size: $font-medium-size;
+    padding-bottom: $space16;
+    @media screen and (min-width:$screen-small-width) {
+      font-size: $font-large-size;
+    }
+  }
+  img {
+    margin-top: $space16;
+    margin-bottom: $space16;
+  }
+  .icon {
+    width: $icon-large-size;
+    height: $icon-large-size;
+    @media screen and (min-width:$screen-xxlarge-width) {
+      width: $icon-xlarge-size;
+      height: $icon-xlarge-size;
+    }
+  }
+  .column.align {
+    &-middle {
+      align-self: center;
+    }
+    &-bottom {
+      align-self: flex-end;
+    }
+  }
+  .reverse {
+    h3 {
+      @media screen and (min-width:$screen-medium-width) {
+        text-align: right;
+        padding-right: $space32;
+      }
+    }
+    .flex {
+      @media screen and (min-width:$screen-medium-width) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+  .center {
+    text-align: center;
+  }
+  .store img {
+    width: auto;
+    margin: $space8 auto;
+  }
+  .hero {
+    text-align: center;
+    @media screen and (min-width:$screen-medium-width) {
+      text-align: left;
+    }
+    .column {
+      @media screen and (min-width:$screen-xlarge-width) {
+        text-align: center;
+      }
+    }
+  }
+  .heroine {
+    ::selection {
+      @include dark-on-selection;
+    }
+    img {
+      width: auto;
+    }
+  }
+  .update {
+    padding-top: $space64;
+    padding-bottom: $space64;
+    .wrapper {
+      padding: $space16;
+      border: 1px solid $gray-200;
+      border-radius: 12px;
+      background-color: white;
+    }
+    h3 {
+      margin: 0;
+      font-size: $font-large-size;
+      @media screen and (min-width:$screen-small-width) {
+        font-size: $font-xlarge-size;
+      }
+    }
+    ul {
+      margin-left: 0;
+      margin-right: 0;
+      @media screen and (min-width:$screen-small-width) {
+        margin-left: $space16;
+        margin-right: $space16;
+      }
+    }
+    li {
+      padding: $space4 0px;
+      margin-bottom: $space4;
+      border-bottom: 1px solid lighten($gray-100, 5%);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: $link-color;
+      font-size: $font-small-size;
+      time {
+        display: none;
+        font-family: $font-monospace;
+        color: $text-color;
+        @media screen and (min-width:$screen-xxsmall-width) {
+          display: inline-block;
+          margin-right: $space32;
+        }
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+      a {
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .bicol {
+    column-count: 1;
+    p {
+      font-size: $font-large-size;
+      padding-bottom: $space16;
+    }
+    @media screen and (min-width:$screen-large-width) {
+      column-count: 2;
+      p {
+        font-size: $font-medium-size;
+        padding-bottom: $space8;
+      }
+    }
+    @media screen and (min-width:$screen-xlarge-width) {
+      p {
+        font-size: $font-large-size;
+        padding-bottom: $space16;
+      }
+    }
+  }
+  .button {
+    display: block;
+    margin: $space8 0;
+    text-align: center;
+    @media screen and (min-width:$screen-large-width) {
+      text-align: left;
+    }
+    a {
+      display: inline-block;
+      width:100%;
+      max-width: 150px;
+      border-radius: 8px;
+      margin: $space4 auto;
+      padding: 5px 0;
+      text-align: center;
+      color: $white-color;
+      &.demo {
+        background-color: darkRed;
+      }
+      &.down {
+        background-color: $black-color;
+      }
+      //
+    }
+  }
+  ul.caption {
+    margin-left: $space8;
+    li {
+      list-style-type: none;
+      font-size: $font-xsmall-size;
+      @media screen and (min-width:$screen-small-width) {
+        font-size: $font-small-size;
+      }
+    }
+  }
+
+} // end
+
+
+
+// ----------------------------------------
+#site-product .free {
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  .hero {
+    background-image: url(/assets/icon-grid.png), linear-gradient(0deg, $ocean-blue-600, $ocean-blue-500);
+    background-size: 256px auto, cover;// contain;
+    min-height: 128px;
+    padding-bottom: $space16;
+    h2 {
+      display: none;
+    }
+    h3 {
+      color: $white-color;
+      margin: 0;
+      padding-bottom: $space32;
+    }
+    p {
+      color: $white-color;
+    }
+    article {
+      text-align: center;
+    }
+  }
+
+  .heroine {
+    background-color: $ocean-blue-600;
+    margin: 0;
+    padding: 0 0 $space32 0;
+    h3 {
+      color: $white-color;
+    }
+    p {
+      color: $white-color;
+    }
+  }
+
+  .freeware {
+    .flex {
+      flex-direction: column;
+      align-items: flex-end;
+      @media screen and (min-width:$screen-large-width) {
+        flex-direction: row;
+      }
+    }
+    .column {
+      padding: $space8;
+      width: 100%;
+      @media screen and (min-width:$screen-large-width) {
+        width: 50%;
+      }
+    }
+    .download {
+      display: block;
+      border-radius: 5px;
+      width: 150px;
+      margin: 0 auto;
+      padding: 5px 0;
+      background-color: $black-color;
+      text-align: center;
+      a {
+        display: block;
+        color: $white-color;
+      }
+    }
+  }
+
+} // end .free
+
+
+
+// ----------------------------------------
+#site-product .ivdrop {
+  .hero {
+    background-color: $sea-color;
+    background-image: url(/assets/feature-bg.svg), linear-gradient(0deg, $sea-color, $background-color);
+    background-size: 70px auto, contain;
+    h2 {
+      color: $ocean-blue-950;
+    }
+    h3 {
+      color: $ocean-blue-800;
+    }
+    .icon {
+      filter: drop-shadow(1px 2px 5px $ocean-blue-800);
+    }
+    .product-front {
+      width: 85%;
+      @media screen and (min-width:$screen-medium-width) {
+        width:40%;
+      }
+    }
+  }
+
+  .heroine {
+    background-color: $ocean-blue-800;
+    h3 {
+      color: $white-color;
+    }
+    p {
+      color: $white-color;
+    }
+    .extra {
+      display: block;
+      border-radius: 10px;
+      margin: $space16 auto;
+      padding: $space8;
+      p {
+        color: $text-color;
+      }
+      background-color: $white-color;
+      @media screen and (min-width:$screen-small-width) {
+        max-width: 85%;
+      }
+      @media screen and (min-width:$screen-xlarge-width) {
+        max-width: 75%;
+        padding: $space16;
+      }
+    }
+  }
+
+} // end .ivdrop
+
+
+
+// ----------------------------------------
+#site-product .minitimer {
+  .hero {
+    background-image: url(/assets/product-img-liquid-cheese.svg), linear-gradient(to bottom, $sea-color, $background-color);
+    background-size: cover;
+    h2 {
+      color: $gray-200;
+    }
+    h3 {
+      color: $ocean-blue-800;
+      font-size: $font-large-size;
+      @media screen and (min-width:$screen-small-width) {
+        font-size: $font-xlarge-size; // default
+      }
+      @media screen and (min-width:$screen-xlarge-width) {
+        font-size: $font-xxlarge-size;
+      }
+    }
+    .icon {
+      filter: drop-shadow(1px 2px 5px $ocean-blue-800);
+    }
+    .product-front {
+      width: 80%;
+      @media screen and (min-width:$screen-medium-width) {
+        width:40%;
+      }
+    }
+  }
+
+  .heroine {
+    background-color: $ocean-blue-800;
+    h3 {
+      color: $white-color;
+    }
+    p {
+      color: $white-color;
+    }
+    .extra {
+      display: block;
+      border-radius: 10px;
+      margin: $space16 auto;
+      padding: $space8;
+      p {
+        color: $text-color;
+      }
+      background-color: $white-color;
+      @media screen and (min-width:$screen-small-width) {
+        max-width: 85%;
+      }
+      @media screen and (min-width:$screen-xlarge-width) {
+        max-width: 75%;
+        padding: $space16;
+      }
+    }
+  }
+
+  .snapshot {
+    background-color: $black-color;
+    .flex {
+      @extend .flex;
+      max-width: 80%;
+      margin: 0 auto;
+      @media screen and (min-width:$screen-small-width) {
+        max-width: 60%;
+      }
+      @media screen and (min-width:$screen-medium-width) {
+        max-width: 100%;
+        flex-direction: row;
+        img {
+          width: 33%;
+        }
+      }
+    }
+  }
+
+  .plain {
+    padding: $space16 0;
+    .column {
+      padding: 0 $space16;
+    }
+  }
+
+} // end .minitimer
+

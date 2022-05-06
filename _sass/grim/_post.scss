@@ -1,0 +1,26 @@
+// _post 에 적용됨
+#site-update,
+#site-post {
+  & > section {}
+  time {
+    color: $text-deco-color;
+    font-size: $font-small-size;
+  }
+  h1 {
+    margin-top: $space16;
+    margin-bottom: $space16;
+    padding-bottom: $space16;
+    border-bottom: 1px solid $border-light-color;
+    color: $text-title-color;
+    font-family: $font-serif;
+    font-size: $font-xlarge-size;
+    text-align: left;
+    @media screen and (min-width:$screen-xsmall-width) {
+      font-size: $font-xxxlarge-size;
+    }
+    @media screen and (min-width:$screen-medium-width) {
+      text-align: center;
+      font-size: $font-xxxxlarge-size;
+    }
+  }
+}

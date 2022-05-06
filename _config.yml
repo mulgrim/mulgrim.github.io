@@ -1,0 +1,44 @@
+# Site info
+title: Mulgrim
+tagline: 'Flexible apps'
+description: 'We create iOS·Mac apps that are easy and fun to use.'
+baseurl: ''
+url: https://mulgrim.com
+
+# Author
+author:
+  name: mulgrim
+
+# SEO
+twitter:
+  username: mulgrim
+
+# Google Analytics
+google_analytics: UA-203128943-1
+
+# Build settings
+markdown: kramdown
+include:
+  - _pages
+
+# Catalog
+update_home_count: 5
+update_product_count: 10
+updates_count: 50
+
+# Assets
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Gems
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Permalinks
+permalink:      /:year-:month-:day/:title
+
+# Excludes
+exclude: [ Gemfile, Gemfile.lock ]
