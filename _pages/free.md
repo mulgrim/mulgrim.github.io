@@ -36,9 +36,9 @@ permalink: /free/
         </div>
         <ul class="caption">
             <li>Requires: MacOS 10.15 Catalina or Later</li>
-            <li>Universal Binary : Both Apple silicon and Intel-based Mac</li>
+            <li>Universal Binary : Both Apple/Intel Based</li>
             <li>Installation: Unzip and double-click.</li>
-            <li>Preferences: Check out “Screen Saver Options…” in System Preferences.</li>
+            <li>Preferences: “Screen Saver Options…” in System Preferences.</li>
         </ul>
     </div>
     </article>
