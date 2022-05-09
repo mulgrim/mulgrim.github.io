@@ -35,7 +35,8 @@ permalink: /free/
             <a class="down" href="https://github.com/mulgrim/ocean/releases/download/free/MatrixScreenSaver.Signed.saver.zip">Download</a>
         </div>
         <ul class="caption">
-            <li>Requires: MacOS 11 BigSur or Later</li>
+            <li>Requires: MacOS 10.15 Catalina or Later</li>
+            <li>Universal Binary : Both Apple silicon and Intel-based Mac</li>
             <li>Installation: Unzip and double-click.</li>
             <li>Preferences: Check out “Screen Saver Options…” in System Preferences.</li>
         </ul>
