@@ -32,7 +32,7 @@ permalink: /free/
         <p>Lightweight Mac Screen Saver to display letters falling on the screen like in Matrix movie.</p>
         <div class ="button">
             <a class="demo" href="https://youtu.be/s68SypbilqY">Demo</a>
-            <a class="down" href="https://github.com/mulgrim/ocean/releases/download/free/MatrixScreenSaverSigned.saver.zip">Download</a>
+            <a class="down" href="https://github.com/mulgrim/ocean/releases/download/free/MatrixScreenSaver.Signed.saver.zip">Download</a>
         </div>
         <ul class="caption">
             <li>Requires: MacOS 11 BigSur or Later</li>
